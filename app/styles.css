@@ -41,8 +41,16 @@ a {
   right: 0;
   width: 100%;
   z-index: 40;
-  background: rgba(251, 251, 250, 0.94);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(7px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  transition: background-color 280ms ease, backdrop-filter 280ms ease, box-shadow 280ms ease;
+}
+
+.navbar-wrap.navbar-scrolled {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
 }
 
 .navbar {
@@ -51,7 +59,13 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 2rem;
+  padding: 1.05rem 2rem;
+  transition: padding 280ms ease;
+}
+
+.navbar-wrap.navbar-scrolled .navbar {
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
 }
 
 .brand {
@@ -883,6 +897,10 @@ a {
   padding: 0.52rem 0.95rem;
   text-decoration: none;
   transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.editorial-read-btn svg {
+  display: block;
 }
 
 .editorial-read-btn:hover {
