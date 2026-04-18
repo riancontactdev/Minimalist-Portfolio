@@ -35,7 +35,7 @@ a {
 }
 
 .navbar-wrap {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -91,9 +91,9 @@ a {
 
 .hero {
   position: relative;
-  margin-top: 4rem;
-  padding: 6rem 1rem;
-  border-radius: 1rem;
+  margin-top: 3.2rem;
+  padding: 5.5rem 0;
+  border-radius: 0;
   overflow: hidden;
   isolation: isolate;
 }
@@ -235,18 +235,29 @@ a {
 
 @media (max-width: 720px) {
   .page-shell {
-    padding: 0 1rem;
+    padding: 5.2rem 1rem 0;
   }
 
-  .navbar,
-  .footer-top {
-    flex-direction: column;
-    align-items: flex-start;
+  .navbar {
+    padding: 0.9rem 1rem;
   }
 
   .nav-list {
-    gap: 1rem;
-    flex-wrap: wrap;
+    gap: 0.9rem;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 0.2rem;
+    scrollbar-width: none;
+  }
+
+  .nav-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .hero {
@@ -337,7 +348,7 @@ a {
 
 
 .timeline {
-  background: #ffffff;
+  background: transparent;
   color: #000000;
   padding: 8rem 0 9rem;
   font-family: var(--font-stix), Georgia, serif;
@@ -707,5 +718,17 @@ a {
 
   .project-main p {
     max-width: none;
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
