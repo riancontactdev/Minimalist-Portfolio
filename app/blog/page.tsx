@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
 
 const articles = [
   {
@@ -29,7 +28,6 @@ const articles = [
 export default function BlogIndexPage() {
   return (
     <>
-      <Navbar />
       <main className="editorial-index">
         <div className="editorial-index-shell">
           <p className="editorial-kicker">Cybersecurity Journal</p>

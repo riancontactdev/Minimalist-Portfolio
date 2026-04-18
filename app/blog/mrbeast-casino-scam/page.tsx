@@ -1,11 +1,9 @@
 import Link from 'next/link';
 import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
 
 export default function MrBeastCasinoScamPage() {
   return (
     <>
-      <Navbar />
       <main className="editorial-article">
         <article className="editorial-shell">
           <Link href="/blog" className="editorial-back-btn">

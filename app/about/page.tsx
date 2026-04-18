@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
 
 const focusItems = [
   'Frontend Development',
@@ -71,7 +70,6 @@ export default function AboutPage() {
 
   return (
     <>
-      <Navbar />
       <main className="about-editorial-page" ref={pageRef}>
         <div className="about-editorial-shell">
           <section className="about-hero about-reveal">
