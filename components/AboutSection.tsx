@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useRef, useState, type MouseEvent } from 'react';
 
-const philosophyItems = ['Clean design.', 'Thoughtful interactions.', 'Purpose over noise.', 'Simplicity that feels powerful.'];
+const buildPrinciples = ['Minimal design.', 'Thoughtful interactions.', 'Performance that feels invisible.'];
 
 const focusItems = [
   'Frontend Development',
@@ -116,10 +116,19 @@ export default function AboutSection() {
         </section>
 
         <section data-reveal="true" className="about-reveal-item mt-24">
-          <p className="mb-5 text-[11px] uppercase tracking-[0.2em] text-white/45">What I Believe</p>
-          <h2 className="font-[family-name:var(--font-stix)] text-[clamp(2rem,5vw,3.2rem)] tracking-[-0.02em]">WHAT I BELIEVE</h2>
+          <p className="mb-5 text-[11px] uppercase tracking-[0.2em] text-white/45">Philosophy</p>
+          <h2 className="font-[family-name:var(--font-stix)] text-[clamp(2rem,5vw,3.2rem)] tracking-[-0.02em]">WHAT I BUILD</h2>
+
+          <div className="mt-10 max-w-[700px] space-y-6 text-[1.03rem] leading-8 text-white/78 sm:text-[1.08rem]">
+            <p>I believe the best digital experiences feel effortless.</p>
+            <p>
+              Good design is not about adding more—it is about removing what does not belong.
+            </p>
+            <p>I focus on building interfaces that feel clear, intentional, and quietly memorable.</p>
+          </div>
+
           <ul className="mt-10 divide-y divide-white/10 border-y border-white/10">
-            {philosophyItems.map((item) => (
+            {buildPrinciples.map((item) => (
               <li key={item} className="group flex items-center justify-between py-5">
                 <span className="text-xl text-white/75 transition duration-300 group-hover:translate-x-1 group-hover:text-white sm:text-2xl">
                   {item}
@@ -128,6 +137,14 @@ export default function AboutSection() {
               </li>
             ))}
           </ul>
+
+          <div className="mt-10 max-w-[700px] space-y-6 text-[1.03rem] leading-8 text-white/78 sm:text-[1.08rem]">
+            <p>Because the strongest products are often the ones that feel the simplest to use.</p>
+            <p>I do not build for trends.</p>
+            <p className="font-[family-name:var(--font-stix)] text-2xl leading-tight tracking-[-0.01em] text-white sm:text-[2rem]">
+              I build for clarity.
+            </p>
+          </div>
         </section>
 
         <div className="about-marquee-strip mt-20 border-y border-white/10 py-4 text-xs uppercase tracking-[0.24em] text-white/50">
