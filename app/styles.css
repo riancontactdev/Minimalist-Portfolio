@@ -964,6 +964,289 @@ a {
   padding: 6rem 0 6.5rem;
 }
 
+.about-editorial-page {
+  position: relative;
+  background: #fff;
+  color: #000;
+  padding: 7.4rem 0 5rem;
+  overflow: hidden;
+}
+
+.about-editorial-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 22% 18%, rgba(0, 0, 0, 0.03) 0.7px, transparent 0.7px),
+    radial-gradient(circle at 78% 74%, rgba(0, 0, 0, 0.025) 0.7px, transparent 0.7px);
+  background-size: 3px 3px;
+  opacity: 0.38;
+}
+
+.about-editorial-shell {
+  width: min(980px, 92vw);
+  margin: 0 auto;
+  position: relative;
+}
+
+.about-reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 800ms ease, transform 800ms ease;
+}
+
+.about-reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-section-no {
+  display: inline-block;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.76rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.about-hero h1 {
+  margin: 1rem 0 0;
+  font-family: var(--font-stix), Georgia, serif;
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 0.92;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+.about-hero p {
+  margin: 1.5rem 0 0;
+  max-width: 38rem;
+  font-family: var(--font-inter), sans-serif;
+  font-size: clamp(1.06rem, 1.5vw, 1.26rem);
+  line-height: 1.8;
+}
+
+.about-scroll-indicator {
+  margin-top: 2.2rem;
+  width: 1px;
+  height: 56px;
+  background: rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.about-scroll-indicator span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 18px;
+  background: #000;
+  animation: about-scroll 1.8s ease-in-out infinite;
+}
+
+.about-divider {
+  margin-top: 1.8rem;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.about-journey,
+.about-philosophy,
+.about-focus,
+.about-closing {
+  margin-top: 5.4rem;
+}
+
+.about-journey h2,
+.about-philosophy h2,
+.about-focus h2,
+.about-closing h2 {
+  margin: 0.85rem 0 0;
+  font-family: var(--font-stix), Georgia, serif;
+  font-size: clamp(2.05rem, 4.6vw, 3.45rem);
+  line-height: 1.06;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+.about-prose {
+  margin-top: 2rem;
+  max-width: 42rem;
+}
+
+.about-prose p,
+.about-closing p {
+  margin: 1.05rem 0 0;
+  font-family: var(--font-inter), sans-serif;
+  font-size: clamp(1rem, 1.35vw, 1.13rem);
+  line-height: 1.95;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.about-philosophy ul {
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+  max-width: 32rem;
+}
+
+.about-philosophy li {
+  font-family: var(--font-stix), Georgia, serif;
+  font-size: clamp(1.32rem, 2.6vw, 2rem);
+  line-height: 1.3;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding-bottom: 0.38rem;
+}
+
+.about-marquee-strip {
+  margin-top: 4.6rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.14);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+  padding: 0.9rem 0;
+}
+
+.about-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: about-marquee 22s linear infinite;
+}
+
+.about-marquee-track span {
+  font-family: var(--font-inter), sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.about-focus-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 46rem;
+}
+
+.about-focus-card {
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  padding: 1.2rem 1rem;
+  transition: transform 220ms ease, border-color 220ms ease;
+}
+
+.about-focus-card:hover {
+  transform: scale(1.02);
+  border-color: rgba(0, 0, 0, 0.42);
+}
+
+.about-focus-card p {
+  margin: 0;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1rem;
+}
+
+.about-quote {
+  margin-top: 4.8rem;
+  max-width: 40rem;
+}
+
+.about-quote p {
+  margin: 1.3rem 0 0;
+  font-family: var(--font-stix), Georgia, serif;
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+}
+
+.about-cta {
+  margin-top: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  border-radius: 999px;
+  padding: 0.68rem 1rem;
+  font-family: var(--font-inter), sans-serif;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.about-cta:hover {
+  opacity: 0.76;
+}
+
+.magnetic-btn {
+  will-change: transform;
+}
+
+.about-footer-micro {
+  margin-top: 4.6rem;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.84rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.about-footer-micro .to {
+  opacity: 0;
+  margin-left: 0.45rem;
+  transition: opacity 200ms ease;
+}
+
+.about-footer-micro:hover .from {
+  opacity: 0;
+}
+
+.about-footer-micro:hover .to {
+  opacity: 1;
+}
+
+@keyframes about-scroll {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(34px);
+    opacity: 0;
+  }
+}
+
+@keyframes about-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-editorial-page {
+    padding: 6.1rem 0 4.5rem;
+  }
+
+  .about-editorial-shell {
+    width: min(980px, 90vw);
+  }
+
+  .about-focus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-journey,
+  .about-philosophy,
+  .about-focus,
+  .about-closing {
+    margin-top: 4.4rem;
+  }
+}
+
 .projects-shell {
   max-width: 56rem;
   margin: 0 auto;
