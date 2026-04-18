@@ -56,9 +56,7 @@ export default function BlogIndexPage() {
           </div>
         </div>
       </main>
-      <div className="page-shell">
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 }

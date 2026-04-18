@@ -128,9 +128,7 @@ export default function DiscordNitroGeneratorScamPage() {
         </section>
         </article>
       </main>
-      <div className="page-shell">
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 }

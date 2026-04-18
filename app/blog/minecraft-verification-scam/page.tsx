@@ -117,9 +117,7 @@ export default function MinecraftVerificationScamPage() {
         </section>
         </article>
       </main>
-      <div className="page-shell">
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 }

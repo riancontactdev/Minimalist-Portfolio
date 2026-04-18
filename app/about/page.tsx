@@ -169,9 +169,7 @@ export default function AboutPage() {
           </p>
         </div>
       </main>
-      <div className="page-shell">
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 }

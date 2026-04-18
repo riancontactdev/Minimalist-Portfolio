@@ -111,9 +111,7 @@ export default function MrBeastCasinoScamPage() {
         </section>
         </article>
       </main>
-      <div className="page-shell">
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 }
