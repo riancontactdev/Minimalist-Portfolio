@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import ProjectsArchive from '@/components/ProjectsArchive';
+import Footer from '@/components/Footer';
 
 export default function ProjectsPage() {
   return (
@@ -8,6 +9,7 @@ export default function ProjectsPage() {
       <main>
         <ProjectsArchive />
       </main>
+      <Footer />
     </div>
   );
 }

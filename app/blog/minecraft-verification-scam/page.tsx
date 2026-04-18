@@ -1,12 +1,25 @@
+import Link from 'next/link';
+import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
+
 export default function MinecraftVerificationScamPage() {
   return (
-    <main className="editorial-article">
-      <article className="editorial-shell">
-        <header className="editorial-header">
-          <p className="editorial-kicker">January 2026 · 10 min read</p>
-          <h1>The Minecraft Verification Scam</h1>
-          <p className="editorial-subtitle">How fake Discord servers are stealing player accounts.</p>
-        </header>
+    <>
+      <Navbar />
+      <main className="editorial-article">
+        <article className="editorial-shell">
+          <Link href="/blog" className="editorial-back-btn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M19 12H5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+              <path d="m11 18-6-6 6-6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+            </svg>
+            <span>Back</span>
+          </Link>
+          <header className="editorial-header">
+            <p className="editorial-kicker">January 2026 · 10 min read</p>
+            <h1>The Minecraft Verification Scam</h1>
+            <p className="editorial-subtitle">How fake Discord servers are stealing player accounts.</p>
+          </header>
 
         <section>
           <h2>The Entry Point: In-Game Messages and Social Pressure</h2>
@@ -104,7 +117,11 @@ export default function MinecraftVerificationScamPage() {
             entered in the wrong place can cost years of account history.
           </p>
         </section>
-      </article>
-    </main>
+        </article>
+      </main>
+      <div className="page-shell">
+        <Footer />
+      </div>
+    </>
   );
 }

@@ -1,14 +1,27 @@
+import Link from 'next/link';
+import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
+
 export default function MrBeastCasinoScamPage() {
   return (
-    <main className="editorial-article">
-      <article className="editorial-shell">
-        <header className="editorial-header">
-          <p className="editorial-kicker">November 2025 · 8 min read</p>
-          <h1>The Massive MrBeast Casino Scam Exposed</h1>
-          <p className="editorial-subtitle">
-            How fake platforms weaponize trust, celebrity influence, and stolen accounts at scale.
-          </p>
-        </header>
+    <>
+      <Navbar />
+      <main className="editorial-article">
+        <article className="editorial-shell">
+          <Link href="/blog" className="editorial-back-btn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M19 12H5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+              <path d="m11 18-6-6 6-6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+            </svg>
+            <span>Back</span>
+          </Link>
+          <header className="editorial-header">
+            <p className="editorial-kicker">November 2025 · 8 min read</p>
+            <h1>The Massive MrBeast Casino Scam Exposed</h1>
+            <p className="editorial-subtitle">
+              How fake platforms weaponize trust, celebrity influence, and stolen accounts at scale.
+            </p>
+          </header>
 
         <section>
           <h2>The Promise: Instant Money, No Risk</h2>
@@ -98,7 +111,11 @@ export default function MrBeastCasinoScamPage() {
             delay is your best defense.
           </p>
         </section>
-      </article>
-    </main>
+        </article>
+      </main>
+      <div className="page-shell">
+        <Footer />
+      </div>
+    </>
   );
 }

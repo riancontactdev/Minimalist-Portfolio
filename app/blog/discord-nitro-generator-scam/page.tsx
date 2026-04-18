@@ -1,12 +1,25 @@
+import Link from 'next/link';
+import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
+
 export default function DiscordNitroGeneratorScamPage() {
   return (
-    <main className="editorial-article">
-      <article className="editorial-shell">
-        <header className="editorial-header">
-          <p className="editorial-kicker">August 2025 · 12 min read</p>
-          <h1>The Truth About Discord Nitro Generators</h1>
-          <p className="editorial-subtitle">Why free Nitro promises are usually malware in disguise.</p>
-        </header>
+    <>
+      <Navbar />
+      <main className="editorial-article">
+        <article className="editorial-shell">
+          <Link href="/blog" className="editorial-back-btn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M19 12H5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+              <path d="m11 18-6-6 6-6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+            </svg>
+            <span>Back</span>
+          </Link>
+          <header className="editorial-header">
+            <p className="editorial-kicker">August 2025 · 12 min read</p>
+            <h1>The Truth About Discord Nitro Generators</h1>
+            <p className="editorial-subtitle">Why free Nitro promises are usually malware in disguise.</p>
+          </header>
 
         <section>
           <h2>The DM That Starts It All</h2>
@@ -115,7 +128,11 @@ export default function DiscordNitroGeneratorScamPage() {
             as hostile by default. In modern threat landscapes, skepticism is not paranoia—it is baseline security.
           </p>
         </section>
-      </article>
-    </main>
+        </article>
+      </main>
+      <div className="page-shell">
+        <Footer />
+      </div>
+    </>
   );
 }
